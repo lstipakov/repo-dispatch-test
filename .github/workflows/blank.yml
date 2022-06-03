@@ -25,7 +25,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Repository Dispatch
-        if: ${{ env.REPO_DISPATCH }} != ''
+        if: "${{ env.REPO_DISPATCH != '' }}"
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ env.REPO_DISPATCH }}
